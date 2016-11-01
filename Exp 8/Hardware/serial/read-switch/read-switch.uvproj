@@ -46,7 +46,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>combination-lock</OutputName>
+          <OutputName>read-switch</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -424,9 +424,9 @@
               <FilePath>.\LPC2300.s</FilePath>
             </File>
             <File>
-              <FileName>combination-lock.c</FileName>
+              <FileName>read-switch.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\combination-lock.c</FilePath>
+              <FilePath>.\read-switch.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -1,0 +1,11 @@
+EE3701     		Microprocessor Laboratory
+		Serial Communication and ADC
+1.  Read the serial communication and ADC sections in the LPC2378 data sheet. Go through the program  and understand the configuration of the registers. 
+2.  Explain the statements in the programs to the TA with  particular emphasis on the configuration register values and the while loops used for checking.
+3.  In serial communication do the following modifications
+        (i)  Send a character from the PC and display its ascii value on the LEDs on the Kit. If it is a Hexadecimal character then display the actual value.
+        (ii)  Read the 8-way DIP switch and display the value on the PC
+4. In ADC, configure the ADC to operate with a resolution of 4 bits .
+
+
+
