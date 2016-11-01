@@ -1,0 +1,16 @@
+EE3701   Microprocessor Laboratory
+
+    Hardware experiments on switch and LED
+	
+1.  Turn on one of the eight LEDs and rotate it in a Round-Robin
+    fashion.
+
+2. Read the 8-bit switch data. Split it into two nibbles. 
+   Add them and display the result on the LEDs. See that 
+   the sum has a carry and display it.
+   
+3. Set up  a combination lock on the 8-bit DIP switch. 
+   Given a bit pattern in the program, the LEDs has to
+   turn on  only if the correct combination is set on the 
+   DIP switch.
+
