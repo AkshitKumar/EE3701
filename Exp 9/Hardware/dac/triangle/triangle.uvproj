@@ -46,7 +46,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>send-char</OutputName>
+          <OutputName>triangle</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -424,9 +424,9 @@
               <FilePath>.\LPC2300.s</FilePath>
             </File>
             <File>
-              <FileName>send-char.c</FileName>
+              <FileName>triangle.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\send-char.c</FilePath>
+              <FilePath>.\triangle.c</FilePath>
             </File>
           </Files>
         </Group>

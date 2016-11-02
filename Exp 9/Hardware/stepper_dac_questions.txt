@@ -1,0 +1,15 @@
+EE3701					Microprocessor Laboratory
+
+ARM Experiment 2      Stepper Motor and DAC questions
+
+1. Rotate the stepper motor in the opposite direction
+
+2. Find the maximum speed at which the stepper motor can rotate.
+
+3. Find the step angle
+
+4. Generate Sawtooth (Ramp), Triangle and Sine waveforms using DAC. For
+   Sinewave store the values in a lookup table and use it in your program.
+
+5. Generate a DC voltage of 1.635 V using DAC
+
