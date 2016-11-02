@@ -1,0 +1,2 @@
+Dependencies for Project 'compare', Target 'Target 1': (DO NOT MODIFY !)
+F (.\compare.s)(0x5819ABD4)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\Inc\Philips--pd "__UVISION_VERSION SETA 521"--list .\listings\compare.lst --xref -o .\objects\compare.o --depend .\objects\compare.d)

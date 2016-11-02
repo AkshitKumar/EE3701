@@ -1,0 +1,109 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             Program, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000         Main
+    5 00000000 E59F1020        LDR              R1, Value1
+    6 00000004 E59F2020        LDR              R2, Value2
+    7 00000008 E1510002        CMP              R1,R2
+    8 0000000C CA000002        BGT              Greater
+    9 00000010 E59F0018        LDR              R0, =Result1
+   10 00000014 E5802000        STR              R2, [R0]
+   11 00000018 EF000011        SWI              &11
+   12 0000001C         
+   13 0000001C         Greater
+   14 0000001C E59F000C        LDR              R0, =Result1
+   15 00000020 E5801000        STR              R1, [R0]
+   16 00000024 EF000011        SWI              &11
+   17 00000028         
+   18 00000028 0000CA23 
+                       Value1  DCD              0xCA23
+   19 0000002C 0000CA24 
+                       Value2  DCD              0xCA24
+   20 00000030         
+   21 00000030 00000000 
+              00000000         AREA             DataRAM, DATA, READWRITE
+   22 00000000 00000000 
+                       Result1 DCD              0
+   23 00000004                 END
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\compare.d -o.\objects\compare.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\A
+RM\CMSIS\Include -IC:\Keil_v5\ARM\Inc\Philips --predefine="__EVAL SETA 1" --pre
+define="__UVISION_VERSION SETA 521" --list=.\listings\compare.lst compare.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Greater 0000001C
+
+Symbol: Greater
+   Definitions
+      At line 13 in file compare.s
+   Uses
+      At line 8 in file compare.s
+Comment: Greater used once
+Main 00000000
+
+Symbol: Main
+   Definitions
+      At line 4 in file compare.s
+   Uses
+      None
+Comment: Main unused
+Program 00000000
+
+Symbol: Program
+   Definitions
+      At line 1 in file compare.s
+   Uses
+      None
+Comment: Program unused
+Value1 00000028
+
+Symbol: Value1
+   Definitions
+      At line 18 in file compare.s
+   Uses
+      At line 5 in file compare.s
+Comment: Value1 used once
+Value2 0000002C
+
+Symbol: Value2
+   Definitions
+      At line 19 in file compare.s
+   Uses
+      At line 6 in file compare.s
+Comment: Value2 used once
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DataRAM 00000000
+
+Symbol: DataRAM
+   Definitions
+      At line 21 in file compare.s
+   Uses
+      None
+Comment: DataRAM unused
+Result1 00000000
+
+Symbol: Result1
+   Definitions
+      At line 22 in file compare.s
+   Uses
+      At line 9 in file compare.s
+      At line 14 in file compare.s
+
+2 symbols
+341 symbols in table
