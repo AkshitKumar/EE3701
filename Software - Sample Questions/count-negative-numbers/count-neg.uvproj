@@ -46,7 +46,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>sine</OutputName>
+          <OutputName>count-neg</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -419,14 +419,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>LPC2300.s</FileName>
+              <FileName>count-neg.s</FileName>
               <FileType>2</FileType>
-              <FilePath>.\LPC2300.s</FilePath>
-            </File>
-            <File>
-              <FileName>sine.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\sine.c</FilePath>
+              <FilePath>.\count-neg.s</FilePath>
             </File>
           </Files>
         </Group>

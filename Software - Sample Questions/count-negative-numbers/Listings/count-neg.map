@@ -1,0 +1,60 @@
+Component: ARM Compiler 5.06 update 3 (build 300) Tool: armlink [4d35c9]
+
+==============================================================================
+
+Section Cross References
+
+    count-neg.o(Program) refers to count-neg.o(Data2) for Length
+    count-neg.o(Program) refers to count-neg.o(Data1) for Data1
+
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    Program                                  0x00000000   Section       60  count-neg.o(Program)
+    count-neg.s                              0x00000000   Number         0  count-neg.o ABSOLUTE
+    Data1                                    0x40000000   Section       16  count-neg.o(Data1)
+    Data2                                    0x40000010   Section        6  count-neg.o(Data2)
+    Length                                   0x40000010   Data           2  count-neg.o(Data2)
+    Result                                   0x40000014   Data           2  count-neg.o(Data2)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv1$ARM_ISAv4$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$STANDARDLIB$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000000
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00000054, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x0000003c, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x0000003c   Code   RO            1  * Program             count-neg.o
+
+
+    Execution Region ER_RW (Base: 0x40000000, Size: 0x00000018, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x40000000   0x00000010   Data   RW            2    Data1               count-neg.o
+    0x40000010   0x00000006   Data   RW            3    Data2               count-neg.o
+
+
+    Execution Region ER_ZI (Base: 0x40000018, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+
+    **** No section assigned to this execution region ****
+

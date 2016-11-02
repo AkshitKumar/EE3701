@@ -1,0 +1,160 @@
+
+
+
+ARM Macro Assembler    Page 1 count-neg
+
+
+    1 00000000                 TTL              count-neg
+    2 00000000                 AREA             Program, CODE, READONLY
+    3 00000000                 ENTRY
+    4 00000000         
+    5 00000000         Main
+    6 00000000 E59F0030        LDR              R0, = Data1
+    7 00000004 E0211001        EOR              R1,R1,R1
+    8 00000008 E51F2008        LDR              R2, Length
+    9 0000000C E3520000        CMP              R2,#0
+   10 00000010 0A000006        BEQ              Done
+   11 00000014         
+   12 00000014         Loop
+   13 00000014 E5903000        LDR              R3,[R0]
+   14 00000018 E3530000        CMP              R3,#0
+   15 0000001C 5A000000        BPL              LoopTest
+   16 00000020 E2811001        ADD              R1,R1,#1
+   17 00000024         
+   18 00000024         LoopTest
+   19 00000024 E2800004        ADD              R0,R0,#4
+   20 00000028 E2522001        SUBS             R2,R2,#0x1
+   21 0000002C 1AFFFFF8        BNE              Loop
+   22 00000030         
+   23 00000030         Done
+   24 00000030 E50F1008        STR              R1, Result
+   25 00000034 EF000011        SWI              &11
+   26 00000038         
+   27 00000038 00000000        AREA             Data1, DATA
+   28 00000000         
+   29 00000000 F1522040 
+                       Table   DCD              &F1522040
+   30 00000004 7F611C22        DCD              &7F611C22
+   31 00000008 80000242        DCD              &80000242
+   32 0000000C 00000000 
+                       TablEnd DCD              0
+   33 00000010                 AREA             Data2, DATA
+   34 00000000 03 00   Length  DCW              (TablEnd - Table)/4
+   35 00000002 00 00           ALIGN
+   36 00000004 00 00   Result  DCW              0
+   37 00000006                 END
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\count-neg.d -o.\objects\count-neg.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_
+v5\ARM\CMSIS\Include -IC:\Keil_v5\ARM\Inc\Philips --predefine="__EVAL SETA 1" -
+-predefine="__UVISION_VERSION SETA 521" --list=.\listings\count-neg.lst count-n
+eg.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Done 00000030
+
+Symbol: Done
+   Definitions
+      At line 23 in file count-neg.s
+   Uses
+      At line 10 in file count-neg.s
+Comment: Done used once
+Loop 00000014
+
+Symbol: Loop
+   Definitions
+      At line 12 in file count-neg.s
+   Uses
+      At line 21 in file count-neg.s
+Comment: Loop used once
+LoopTest 00000024
+
+Symbol: LoopTest
+   Definitions
+      At line 18 in file count-neg.s
+   Uses
+      At line 15 in file count-neg.s
+Comment: LoopTest used once
+Main 00000000
+
+Symbol: Main
+   Definitions
+      At line 5 in file count-neg.s
+   Uses
+      None
+Comment: Main unused
+Program 00000000
+
+Symbol: Program
+   Definitions
+      At line 2 in file count-neg.s
+   Uses
+      None
+Comment: Program unused
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Data1 00000000
+
+Symbol: Data1
+   Definitions
+      At line 27 in file count-neg.s
+   Uses
+      At line 6 in file count-neg.s
+Comment: Data1 used once
+TablEnd 0000000C
+
+Symbol: TablEnd
+   Definitions
+      At line 32 in file count-neg.s
+   Uses
+      At line 34 in file count-neg.s
+Comment: TablEnd used once
+Table 00000000
+
+Symbol: Table
+   Definitions
+      At line 29 in file count-neg.s
+   Uses
+      At line 34 in file count-neg.s
+Comment: Table used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Data2 00000000
+
+Symbol: Data2
+   Definitions
+      At line 33 in file count-neg.s
+   Uses
+      None
+Comment: Data2 unused
+Length 00000000
+
+Symbol: Length
+   Definitions
+      At line 34 in file count-neg.s
+   Uses
+      At line 8 in file count-neg.s
+Comment: Length used once
+Result 00000004
+
+Symbol: Result
+   Definitions
+      At line 36 in file count-neg.s
+   Uses
+      At line 24 in file count-neg.s
+Comment: Result used once
+3 symbols
+345 symbols in table

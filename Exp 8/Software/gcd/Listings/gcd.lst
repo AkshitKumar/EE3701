@@ -1,0 +1,138 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             Program, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000         Main
+    5 00000000 E59F0040        LDR              R0, Value1
+    6 00000004 E59F1040        LDR              R1, Value2
+    7 00000008 E3A03000        MOV              R3, #0
+    8 0000000C E1500003        CMP              R0, R3
+    9 00000010 0A000009        BEQ              BaseCase
+   10 00000014         
+   11 00000014         Loop
+   12 00000014 E1500001        CMP              R0, R1
+   13 00000018 CA000005        BGT              DecreaseR0
+   14 0000001C E0411000        SUB              R1,R1,R0
+   15 00000020 E1510003        CMP              R1,R3
+   16 00000024 1AFFFFFA        BNE              Loop
+   17 00000028 E59F1020        LDR              R1, =Result
+   18 0000002C E5810000        STR              R0, [R1]
+   19 00000030 EF000011        SWI              &11
+   20 00000034         
+   21 00000034         DecreaseR0
+   22 00000034 E0400001        SUB              R0,R0,R1
+   23 00000038 EAFFFFF5        B                Loop
+   24 0000003C         
+   25 0000003C         BaseCase
+   26 0000003C E59F000C        LDR              R0, =Result
+   27 00000040 E5801000        STR              R1,[R0]
+   28 00000044 EF000011        SWI              &11
+   29 00000048         
+   30 00000048 00000006 
+                       Value1  DCD              &6
+   31 0000004C 00000004 
+                       Value2  DCD              &4
+   32 00000050         
+   33 00000050 00000000 
+              00000000         AREA             Data1,DATA,READWRITE
+   34 00000000 00000000 
+                       Result  DCD              0
+   35 00000004                 END
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\gcd.d -o.\objects\gcd.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\CMSIS
+\Include -IC:\Keil_v5\ARM\Inc\Philips --predefine="__EVAL SETA 1" --predefine="
+__UVISION_VERSION SETA 521" --list=.\listings\gcd.lst gcd.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+BaseCase 0000003C
+
+Symbol: BaseCase
+   Definitions
+      At line 25 in file gcd.s
+   Uses
+      At line 9 in file gcd.s
+Comment: BaseCase used once
+DecreaseR0 00000034
+
+Symbol: DecreaseR0
+   Definitions
+      At line 21 in file gcd.s
+   Uses
+      At line 13 in file gcd.s
+Comment: DecreaseR0 used once
+Loop 00000014
+
+Symbol: Loop
+   Definitions
+      At line 11 in file gcd.s
+   Uses
+      At line 16 in file gcd.s
+      At line 23 in file gcd.s
+
+Main 00000000
+
+Symbol: Main
+   Definitions
+      At line 4 in file gcd.s
+   Uses
+      None
+Comment: Main unused
+Program 00000000
+
+Symbol: Program
+   Definitions
+      At line 1 in file gcd.s
+   Uses
+      None
+Comment: Program unused
+Value1 00000048
+
+Symbol: Value1
+   Definitions
+      At line 30 in file gcd.s
+   Uses
+      At line 5 in file gcd.s
+Comment: Value1 used once
+Value2 0000004C
+
+Symbol: Value2
+   Definitions
+      At line 31 in file gcd.s
+   Uses
+      At line 6 in file gcd.s
+Comment: Value2 used once
+7 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Data1 00000000
+
+Symbol: Data1
+   Definitions
+      At line 33 in file gcd.s
+   Uses
+      None
+Comment: Data1 unused
+Result 00000000
+
+Symbol: Result
+   Definitions
+      At line 34 in file gcd.s
+   Uses
+      At line 17 in file gcd.s
+      At line 26 in file gcd.s
+
+2 symbols
+343 symbols in table
